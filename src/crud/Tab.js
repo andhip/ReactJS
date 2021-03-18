@@ -1,7 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 
-function Tab() {
+function Tab({ makanans }) {
   return (
     <Table striped bordered hover>
       <thead>
@@ -14,13 +14,19 @@ function Tab() {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td></td>
-        </tr>
+        {/* looping dgn map */}
+        {makanans.map((makanan, index) => {
+          return (
+            <tr>
+              {/* start from 1 */}
+              <td>{index + 1}</td>
+              <td>{makanan.nama}</td>
+              <td>{makanan.deskripsi}</td>
+              <td>Rp. {makanan.harga}</td>
+              <td></td>
+            </tr>
+          );
+        })}
       </tbody>
     </Table>
   );

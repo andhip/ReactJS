@@ -8,7 +8,7 @@ export default class Crud extends Component {
     super(props);
 
     this.state = {
-      makanan: "",
+      makanans: [],
       nama: "",
       deskripsi: "",
       harga: 0,
@@ -27,15 +27,28 @@ export default class Crud extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log("Data : ", this.state);
+    this.setState({
+      makanans: [
+        ...this.state.makanans, //Semua makanan yang sudah ada
+        {
+          id: this.state.makanans.length + 1, //ditambah yang sekarang
+          nama: this.state.nama,
+          deskripsi: this.state.deskripsi,
+          harga: this.state.harga,
+        },
+      ],
+    });
   };
 
   render() {
+    console.log(this.state.makanans);
     return (
       <div>
         <NavComponent />
         <div className="container mt-5">
-          <Tab />
+          {/* Memasukan inputan form kedalam tabel */}
+          <Tab makanans={this.state.makanans} />
+          {/* membuat event change n submit btn */}
           <Formulir
             {...this.state}
             handleChange={this.handleChange}
