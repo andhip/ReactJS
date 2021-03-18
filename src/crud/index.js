@@ -38,6 +38,14 @@ export default class Crud extends Component {
         },
       ],
     });
+
+    // menghapus nilai inputan pada form ketika sudah disubmit
+    this.setState({
+      nama: "",
+      deskripsi: "",
+      harga: 0,
+      id: "",
+    });
   };
 
   render() {
