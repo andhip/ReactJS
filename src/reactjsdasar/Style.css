@@ -1,82 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
-body{
-    font-family: 'Nunito', sans-serif;
-}
-
-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+body {
+  font-family: "Nunito", sans-serif;
 }
 
-.gt{
-    text-align: center;
-    margin-top: 3rem;
-    text-decoration: 4px underline rgba(73, 43, 241, 0.877); 
-}
-.gt-2{
-    text-align: center;
-    font-weight: 900;
-    font-size: 28px;
-    color: black;
-    margin-top: 3rem;
-    text-decoration: 4px underline rgba(73, 43, 241, 0.877); 
-}
-.gt-3{
-    text-align: center;
-    font-weight: 900;
-    font-size: 24px;
-    color: #fff;
-    text-decoration: 2px underline rgb(255, 161, 21);
-    margin-top: 3rem;
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-h4{
-    text-align: center;
+.gt {
+  text-align: center;
+  margin-top: 3rem;
+  text-decoration: 4px underline rgba(73, 43, 241, 0.877);
+}
+.gt-2 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 28px;
+  color: black;
+  margin-top: 3rem;
+  text-decoration: 4px underline rgba(73, 43, 241, 0.877);
+}
+.gt-3 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 24px;
+  color: #fff;
+  text-decoration: 2px underline rgb(255, 161, 21);
+  margin-top: 3rem;
 }
 
-section{
-    background-color: rgba(73, 43, 241, 0.932);
-    padding: 12px 12px;
-    font-size:22px;
-    margin-top: 7%;
-    border-radius: 50px;
-    color: white;
-    text-align: center;
-    box-shadow: 0px  4px 18px rgba(128, 128, 128, 0.527);
-
-}
-#sec2{
-    background-color: rgba(73, 43, 241, 0.932);
-    padding: 12px 12px;
-    font-size:22px;
-    margin-top: 3%;
-    border-radius: 50px;
-    color: white;
-    text-align: center;
-    box-shadow: 0px  4px 18px rgba(128, 128, 128, 0.527);
+h4 {
+  text-align: center;
 }
 
-h2{
-    font-size:26px;
-    font-weight: 600;
+section {
+  background-color: rgba(73, 43, 241, 0.932);
+  padding: 12px 12px;
+  font-size: 22px;
+  margin-top: 7%;
+  border-radius: 50px;
+  color: white;
+  text-align: center;
+  box-shadow: 0px 4px 18px rgba(128, 128, 128, 0.527);
+}
+#sec2 {
+  background-color: rgba(73, 43, 241, 0.932);
+  padding: 12px 12px;
+  font-size: 22px;
+  margin-top: 3%;
+  border-radius: 50px;
+  color: white;
+  text-align: center;
+  box-shadow: 0px 4px 18px rgba(128, 128, 128, 0.527);
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 600;
 }
 
 button {
-    padding: 6px 6px;
-    background-color: rgb(190, 190, 190);
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0px  2px 12px rgba(133, 132, 132, 0.281);
-    transition:all 0.25s ease-in-out;
+  padding: 6px 6px;
+  background-color: rgb(190, 190, 190);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 2px 12px rgba(133, 132, 132, 0.281);
+  transition: all 0.25s ease-in-out;
 }
 button:hover {
-    padding: 7px 7px;
-    background-color: yellow;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0px  2px 12px rgba(128, 128, 128, 0.411);
+  padding: 7px 7px;
+  background-color: yellow;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0px 2px 12px rgba(128, 128, 128, 0.411);
 }
-
