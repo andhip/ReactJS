@@ -1,12 +1,20 @@
 import React from "react";
 import { Row, Col, Form, Button } from "react-bootstrap";
 
-const Formulir = ({ nama, deskripsi, harga, handleChange, handleSubmit }) => {
+const Formulir = ({
+  nama,
+  deskripsi,
+  harga,
+  handleChange,
+  handleSubmit,
+  id,
+}) => {
   return (
     <div className="mt-5 mb-5">
       <Row>
         <Col>
-          <h3>Tambah Data</h3>
+          {/* If ID 'Available' then Teks changes to 'Edit Data' */}
+          <h3>{id ? "Edit Data" : "Tambah Data"}</h3>
           <hr></hr>
         </Col>
       </Row>

@@ -27,17 +27,37 @@ export default class Crud extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    this.setState({
-      makanans: [
-        ...this.state.makanans, //Semua makanan yang sudah ada
-        {
-          id: this.state.makanans.length + 1, //ditambah yang sekarang
-          nama: this.state.nama,
-          deskripsi: this.state.deskripsi,
-          harga: this.state.harga,
-        },
-      ],
-    });
+    if (this.state.id === "") {
+      this.setState({
+        makanans: [
+          ...this.state.makanans, //Semua makanan yang sudah ada
+          {
+            id: this.state.makanans.length + 1, //ditambah yang sekarang
+            nama: this.state.nama,
+            deskripsi: this.state.deskripsi,
+            harga: this.state.harga,
+          },
+        ],
+      });
+    } else {
+      const notEditMakanan = this.state.makanans //makanan yang tidak dipilih/diedit
+        .filter((makanan) => makanan.id !== this.state.id)
+        .map((filterMakanan) => {
+          return filterMakanan;
+        });
+
+      this.setState({
+        makanans: [
+          ...notEditMakanan, //makanan yang tidak dipilih/didedit
+          {
+            id: this.state.makanans.length + 1, //ditambah yang sekarang
+            nama: this.state.nama,
+            deskripsi: this.state.deskripsi,
+            harga: this.state.harga,
+          },
+        ],
+      });
+    }
 
     // menghapus nilai inputan pada form ketika sudah disubmit
     this.setState({
@@ -48,6 +68,21 @@ export default class Crud extends Component {
     });
   };
 
+  editData = (id) => {
+    const editMakanan = this.state.makanans
+      .filter((makanan) => makanan.id === id)
+      .map((filterMakanan) => {
+        return filterMakanan;
+      });
+
+    this.setState({
+      nama: editMakanan[0].nama,
+      deskripsi: editMakanan[0].deskripsi,
+      harga: editMakanan[0].harga,
+      id: editMakanan[0].id,
+    });
+  };
+
   render() {
     console.log(this.state.makanans);
     return (
@@ -55,7 +90,7 @@ export default class Crud extends Component {
         <NavComponent />
         <div className="container mt-5">
           {/* Memasukan inputan form kedalam tabel */}
-          <Tab makanans={this.state.makanans} />
+          <Tab makanans={this.state.makanans} editData={this.editData} />
           {/* membuat event change n submit btn */}
           <Formulir
             {...this.state}
