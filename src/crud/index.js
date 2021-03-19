@@ -83,6 +83,18 @@ export default class Crud extends Component {
     });
   };
 
+  deleteData = (id) => {
+    const newMakanan = this.state.makanans //makanan yang tidak dipilih/diedit
+      .filter((makanan) => makanan.id !== id)
+      .map((filterMakanan) => {
+        return filterMakanan;
+      });
+
+    this.setState({
+      makanans: newMakanan,
+    });
+  };
+
   render() {
     console.log(this.state.makanans);
     return (
@@ -90,7 +102,11 @@ export default class Crud extends Component {
         <NavComponent />
         <div className="container mt-5">
           {/* Memasukan inputan form kedalam tabel */}
-          <Tab makanans={this.state.makanans} editData={this.editData} />
+          <Tab
+            makanans={this.state.makanans}
+            editData={this.editData}
+            deleteData={this.deleteData}
+          />
           {/* membuat event change n submit btn */}
           <Formulir
             {...this.state}

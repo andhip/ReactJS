@@ -10,7 +10,7 @@ import {
 
 const NavComponent = () => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="dark" variant="dark" expand="lg">
       <Navbar.Brand href="#home">
         <b>CRUDReactJS</b>
       </Navbar.Brand>
@@ -33,7 +33,7 @@ const NavComponent = () => {
         </Nav>
         <Form inline>
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-success">Search</Button>
+          <Button variant="outline-light">Search</Button>
         </Form>
       </Navbar.Collapse>
     </Navbar>
